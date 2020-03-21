@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <!--<table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr th:each="student:${list}">
+            <td th:text="${student.id}"></td>
+            <td th:text="${student.name}"></td>
+            <td th:text="${student.age}"></td>
+        </tr>
+    </table>-->
+  <!--  <p th:text="${name}"></p>
+    <p th:text="'学生姓名:'+${name}"></p>
+    <p th:text="|学生姓名:${name}|"></p>-->
+    <p th:if="${flag == true}" th:text="if条件成立"></p>
+    <p th:unless="${flag != true}" th:text="if条件不成立"></p>
+</body>
+</html>

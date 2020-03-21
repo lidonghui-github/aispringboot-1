@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Hello World</h1>
+<a th:href="@{http://www.baidu.com}">跳转</a>
+<a th:href="@{http://localhost:9090/index/url/ldh}">跳转2</a>
+<img th:src="${src}">
+<br>
+<input th:value="${age gt 30?'中年年':'⻘青年年'}"/>
+<br>
+<div th:switch="${gender}">
+    <p th:case="女">⼥女女</p>
+    <p th:case="男">男</p>
+    <p th:case="*">未知</p>
+</div>
+<br>
+<p th:text="${#request.getAttribute('request')}"></p>
+<p th:text="${#session.getAttribute('session')}"></p>
+<p th:text="${#locale.country}"></p>
+
+<!-- 格式化时间 -->
+<p th:text="${#dates.format(date,'yyyy-MM-dd HH:mm:sss')}"></p>
+<!-- 创建当前时间，精确到天 -->
+<p th:text="${#dates.createToday()}"></p>
+<!-- 创建当前时间，精确到秒 -->
+<p th:text="${#dates.createNow()}"></p>
+<!-- 判断是否为空 -->
+<p th:text="${#strings.isEmpty(name)}"></p>
+<!-- 判断List是否为空 -->
+<p th:text="${#lists.isEmpty(users)}"></p>
+<!-- 输出字符串串⻓长度 -->
+<p th:text="${#strings.length(name)}"></p>
+<!-- 拼接字符串串 -->
+<p th:text="${#strings.concat(name,name,name)}"></p>
+<!-- 创建⾃自定义字符串串 -->
+<p th:text="${#strings.randomAlphanumeric(count)}"></p>
+</body>
+</html>
