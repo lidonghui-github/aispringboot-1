@@ -1,2 +1,8 @@
 server:
   port: 9090
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: utf-8
