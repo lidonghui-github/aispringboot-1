@@ -4,6 +4,7 @@ import com.southwind.entity.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,15 +14,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-
 @Controller
 @RequestMapping("/index")
 public class IndexHandler {
 
     @GetMapping("/index")
-    public String index(Model model) {
+   public String index1111(Model model) {
         System.out.println("/index.....");
-
         List<Student> students = new ArrayList<>();
         students.add(new Student(1L, "aa1", 11));
         students.add(new Student(2L, "aa2", 12));
@@ -107,4 +106,5 @@ public class IndexHandler {
         model.addAttribute("date",new Date());
         return "index5";
     }
+
 }
